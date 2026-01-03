@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Royal Hydrate</title>
+  <meta name="description" content="Royal Hydrate — Quality service with reliable support. Contact us for inquiries and bookings." />
+  <style>
+    :root {
+      --brand: #0a7cff;
+      --dark: #0f172a;
+      --text: #1f2937;
+      --muted: #64748b;
+      --bg: #f8fafc;
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text); background: var(--bg);
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, var(--brand), #3bb9ff);
+      color: var(--white); padding: 64px 20px; text-align: center;
+    }
+    header .brand { font-size: 40px; font-weight: 800; letter-spacing: 0.5px; }
+    header .tagline { font-size: 18px; opacity: 0.95; max-width: 720px; margin: 10px auto 0; }
+    nav {
+      display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+      padding: 14px 20px; background: var(--white); border-bottom: 1px solid #e5e7eb; position: sticky; top: 0; z-index: 10;
+    }
+    nav a {
+      color: var(--dark); text-decoration: none; padding: 8px 12px; border-radius: 8px;
+    }
+    nav a:hover { background: #eef6ff; color: var(--brand); }
+    .container { max-width: 1000px; margin: 0 auto; padding: 32px 20px; }
+    .card {
+      background: var(--white); border: 1px solid #e5e7eb; border-radius: 16px; padding: 24px; box-shadow: 0 6px 24px rgba(15,23,42,0.06);
+    }
+    h2 { margin: 0 0 14px; font-size: 26px; color: var(--dark); }
+    p { margin: 0 0 14px; color: var(--text); }
+    .muted { color: var(--muted); }
+    .grid { display: grid; gap: 20px; grid-template-columns: 1fr; }
+    @media (min-width: 780px) { .grid { grid-template-columns: 1fr 1fr; } }
+    .info-list { display: grid; gap: 10px; }
+    .info-item { display: flex; gap: 10px; align-items: flex-start; }
+    .badge {
+      display: inline-block; padding: 4px 10px; border-radius: 999px;
+      background: #eef6ff; color: var(--brand); font-weight: 600; font-size: 12px; margin-bottom: 10px;
+    }
+    .cta {
+      display: inline-block; background: var(--brand); color: var(--white);
+      padding: 12px 18px; border-radius: 12px; text-decoration: none; font-weight: 600;
+    }
+    .cta:hover { filter: brightness(1.05); }
+    form { display: grid; gap: 12px; }
+    input, textarea {
+      width: 100%; padding: 12px 14px; border: 1px solid #d1d5db; border-radius: 10px; font: inherit;
+      background: var(--white);
+    }
+    input:focus, textarea:focus { outline: 2px solid #cfe6ff; border-color: #9ecbff; }
+    button {
+      padding: 12px 16px; border: none; border-radius: 10px; background: var(--brand);
+      color: var(--white); font-weight: 700; cursor: pointer;
+    }
+    button:hover { filter: brightness(1.05); }
+    footer {
+      margin-top: 40px; padding: 24px; text-align: center; color: var(--muted);
+    }
+    .small { font-size: 13px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">Royal Hydrate</div>
+    <p class="tagline">Reliable service, clear communication, and local support you can trust.</p>
+    <p style="margin-top:16px;"><a class="cta" href="tel:+919118663751">Call: +91 91186 63751</a></p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+    <a href="#location">Location</a>
+  </nav>
+
+  <main class="container">
+    <section id="about" class="card">
+      <span class="badge">About</span>
+      <h2>About Royal Hydrate</h2>
+      <p>We serve our community with dependable solutions and responsive support. If you need help, a quick quote, or have questions, we’re just a call away.</p>
+      <p class="muted">Operating locally in Siddharth Nagar district with fast turnaround and friendly assistance.</p>
+    </section>
+
+    <section id="services" class="card">
+      <span class="badge">Services</span>
+      <h2>What we offer</h2>
+      <div class="info-list">
+        <div class="info-item">
+          <div>
+            <strong>Consultation:</strong> Get guidance tailored to your needs and budget.
+            <p class="small muted">Quick responses, transparent pricing.</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div>s
+            <strong>On-site support:</strong> Local assistance with reliable scheduling.
+            <p class="small muted">Serving Bansi and nearby areas.</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div>
+            <strong>Customer care:</strong> Call or WhatsApp for updates and bookings.
+            <p class="small muted">Phone: +91 91186 63751</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="card">
+      <span class="badge">Contact</span>
+      <h2>Get in touch</h2>
+      <p><strong>Phone:</strong> +91 91186 63751</p>
+      <p><strong>Address:</strong> Pashupati Nagar, Sahaji Farm, Post Narkatha, Bansi, District Siddharth Nagar, PIN 272253</p>
+      <form onsubmit="event.preventDefault(); alert('Thank you! We will contact you soon.');">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="email" placeholder="Your email" required />
+        <textarea name="message" rows="4" placeholder="Your message" required></textarea>
+        <button type="submit">Send message</button>
+      </form>
+      <p class="small muted" style="margin-top:8px;">Form is demo-only. Connect it to email or WhatsApp for real submissions.</p>
+    </section>
+
+    <section id="location" class="card">
+      <span class="badge">Location</span>
+      <h2>Find us</h2>
+      <p>We’re located in Pashupati Nagar, near Sahaji Farm, Post Narkatha, Bansi, Siddharth Nagar.</p>
+      <p><a class="cta" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Pashupati+Nagar+Sahaji+Farm+Post+Narkatha+Bansi+Siddharth+Nagar+272253">Open in Google Maps</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Royal Hydrate</p>
+    <p class="small">Made with care for our local community.</p>
+  </footer>
+</body>
+</html>
